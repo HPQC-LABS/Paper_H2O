@@ -151,11 +151,12 @@ restoregeometry
 \begin_layout Title
 
 \size normal
-FCI quality energy for an (8e,957o) active space of H
+FCI quality energy for H
 \begin_inset Formula $_{2}$
 \end_inset
 
-O in a cc-pV9Z basis set
+O with a frozen core in a cc-pV9Z basis set: 8 electrons in 957 spatial
+ orbitals
 \end_layout
 
 \begin_layout Section
@@ -198,8 +199,8 @@ status open
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="decimal" decimal_point="." valignment="top">
+<column alignment="decimal" decimal_point="." valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -207,7 +208,7 @@ status open
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -216,7 +217,7 @@ status open
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -225,7 +226,7 @@ cc-pV2Z
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -234,7 +235,7 @@ cc-pV3Z
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -243,7 +244,7 @@ cc-pV4Z
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -252,7 +253,7 @@ cc-pV5Z
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -261,7 +262,7 @@ cc-pV6Z
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -270,7 +271,7 @@ cc-pV7Z
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -279,7 +280,7 @@ cc-pV8Z
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -288,7 +289,7 @@ cc-pV9Z
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -330,7 +331,7 @@ RHF
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -352,7 +353,7 @@ RHF
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -378,7 +379,7 @@ RHF
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-76.067 059 74
 \end_layout
 
 \end_inset
@@ -388,6 +389,19 @@ RHF
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.067 375 93
 \end_layout
 
 \end_inset
@@ -397,6 +411,19 @@ RHF
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.067 426 45
 \end_layout
 
 \end_inset
@@ -406,6 +433,19 @@ RHF
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.067 449 34
 \end_layout
 
 \end_inset
@@ -415,6 +455,19 @@ RHF
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.067 455 16
 \end_layout
 
 \end_inset
@@ -423,7 +476,7 @@ RHF
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+?? use CV basis sets to get this?
 \end_layout
 
 \end_inset
@@ -461,7 +514,7 @@ CCSD
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -483,7 +536,7 @@ CCSD
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -510,6 +563,19 @@ CCSD
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.359 518 95
 \end_layout
 
 \end_inset
@@ -519,6 +585,19 @@ CCSD
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.362 322 61
 \end_layout
 
 \end_inset
@@ -528,6 +607,19 @@ CCSD
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.363 594 23
 \end_layout
 
 \end_inset
@@ -537,6 +629,19 @@ CCSD
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.364 295 52
 \end_layout
 
 \end_inset
@@ -546,6 +651,19 @@ CCSD
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.364 659
 \end_layout
 
 \end_inset
@@ -592,7 +710,7 @@ CCSD(T)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -614,7 +732,7 @@ CCSD(T)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -641,6 +759,19 @@ CCSD(T)
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.369 041 18
 \end_layout
 
 \end_inset
@@ -650,6 +781,19 @@ CCSD(T)
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.372 018 85
 \end_layout
 
 \end_inset
@@ -659,6 +803,19 @@ CCSD(T)
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.373 361 92
 \end_layout
 
 \end_inset
@@ -668,6 +825,19 @@ CCSD(T)
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.374 100 30
 \end_layout
 
 \end_inset
@@ -677,6 +847,19 @@ CCSD(T)
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.374 481
 \end_layout
 
 \end_inset
@@ -723,7 +906,7 @@ CCSDT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -745,7 +928,7 @@ CCSDT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -772,6 +955,19 @@ CCSDT
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.368 996 80
 \end_layout
 
 \end_inset
@@ -781,6 +977,19 @@ CCSDT
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.371 941 42
 \end_layout
 
 \end_inset
@@ -790,6 +999,19 @@ CCSDT
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.373 263 91
 \end_layout
 
 \end_inset
@@ -799,6 +1021,19 @@ CCSDT
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.373 990 12
 \end_layout
 
 \end_inset
@@ -808,6 +1043,19 @@ CCSDT
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.374 364
 \end_layout
 
 \end_inset
@@ -854,7 +1102,7 @@ CCSDT(Q)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -876,7 +1124,7 @@ CCSDT(Q)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -903,6 +1151,19 @@ CCSDT(Q)
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.369 430 92
 \end_layout
 
 \end_inset
@@ -912,6 +1173,19 @@ CCSDT(Q)
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.372 383 65
 \end_layout
 
 \end_inset
@@ -921,6 +1195,8 @@ CCSDT(Q)
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 706 13(405? 1/2 of 810 which is previous difference)
 \end_layout
 
 \end_inset
@@ -930,6 +1206,8 @@ CCSDT(Q)
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 432 34
 \end_layout
 
 \end_inset
@@ -939,6 +1217,8 @@ CCSDT(Q)
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 806
 \end_layout
 
 \end_inset
@@ -985,7 +1265,7 @@ CCSDTQ
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1007,7 +1287,7 @@ CCSDTQ
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1034,6 +1314,19 @@ CCSDTQ
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.369 394 18
 \end_layout
 
 \end_inset
@@ -1043,6 +1336,19 @@ CCSDTQ
 
 \begin_layout Plain Layout
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-76.372 345 24
 \end_layout
 
 \end_inset
@@ -1052,6 +1358,8 @@ CCSDTQ
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 667 73(in progress in CFOUR)
 \end_layout
 
 \end_inset
@@ -1061,6 +1369,8 @@ CCSDTQ
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 393 94
 \end_layout
 
 \end_inset
@@ -1070,6 +1380,8 @@ CCSDTQ
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 768
 \end_layout
 
 \end_inset
@@ -1116,7 +1428,7 @@ CCSDTQ(P)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1138,7 +1450,7 @@ CCSDTQ(P)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1165,6 +1477,8 @@ CCSDTQ(P)
 
 \begin_layout Plain Layout
 
+\color red
+-76.369 400 65(ok, because difference is getting smaller noticeably)
 \end_layout
 
 \end_inset
@@ -1174,6 +1488,8 @@ CCSDTQ(P)
 
 \begin_layout Plain Layout
 
+\color red
+-76.372 351 72
 \end_layout
 
 \end_inset
@@ -1183,6 +1499,8 @@ CCSDTQ(P)
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 674 20
 \end_layout
 
 \end_inset
@@ -1192,6 +1510,8 @@ CCSDTQ(P)
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 400 41
 \end_layout
 
 \end_inset
@@ -1201,6 +1521,8 @@ CCSDTQ(P)
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 774
 \end_layout
 
 \end_inset
@@ -1247,7 +1569,7 @@ CCSDTQP
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1269,7 +1591,7 @@ CCSDTQP
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1296,6 +1618,10 @@ CCSDTQP
 
 \begin_layout Plain Layout
 
+\color blue
+-76.369 409 64(500?)
+\color red
+(not ok because difference got bigger)
 \end_layout
 
 \end_inset
@@ -1305,6 +1631,8 @@ CCSDTQP
 
 \begin_layout Plain Layout
 
+\color red
+-76.372 360 70
 \end_layout
 
 \end_inset
@@ -1314,6 +1642,8 @@ CCSDTQP
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 683 19
 \end_layout
 
 \end_inset
@@ -1323,6 +1653,8 @@ CCSDTQP
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 40 94
 \end_layout
 
 \end_inset
@@ -1332,6 +1664,8 @@ CCSDTQP
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 783
 \end_layout
 
 \end_inset
@@ -1378,7 +1712,7 @@ CCSDTQP(H)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1400,13 +1734,24 @@ CCSDTQP(H)
 
 \end_inset
 </cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color blue
+-76.360 199 02(200)
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \color red
--76.360 199 02
+-76.369 410 19
 \end_layout
 
 \end_inset
@@ -1416,6 +1761,8 @@ CCSDTQP(H)
 
 \begin_layout Plain Layout
 
+\color red
+-76.372 361 25
 \end_layout
 
 \end_inset
@@ -1425,6 +1772,8 @@ CCSDTQP(H)
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 683 74
 \end_layout
 
 \end_inset
@@ -1434,6 +1783,8 @@ CCSDTQP(H)
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 409 95
 \end_layout
 
 \end_inset
@@ -1443,15 +1794,8 @@ CCSDTQP(H)
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+\color red
+-76.374 784
 \end_layout
 
 \end_inset
@@ -1498,7 +1842,7 @@ CCSDTQPH
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1520,13 +1864,36 @@ CCSDTQPH
 
 \end_inset
 </cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.360 199 19(220)
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\color red
+can alex thom do it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \color red
--76.360 199 19
+-76.369 410 36
 \end_layout
 
 \end_inset
@@ -1536,6 +1903,8 @@ CCSDTQPH
 
 \begin_layout Plain Layout
 
+\color red
+-76.372 361 42
 \end_layout
 
 \end_inset
@@ -1545,6 +1914,8 @@ CCSDTQPH
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 683 91
 \end_layout
 
 \end_inset
@@ -1554,6 +1925,8 @@ CCSDTQPH
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 410 12
 \end_layout
 
 \end_inset
@@ -1563,15 +1936,8 @@ CCSDTQPH
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+\color red
+-76.374 784
 \end_layout
 
 \end_inset
@@ -1618,7 +1984,7 @@ CCSDTQPH(S)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1629,13 +1995,24 @@ CCSDTQPH(S)
 
 \end_inset
 </cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.360 199 24(230)
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \color red
--76.360 199 24
+-76.369 410 41
 \end_layout
 
 \end_inset
@@ -1645,6 +2022,8 @@ CCSDTQPH(S)
 
 \begin_layout Plain Layout
 
+\color red
+-76.372 361 47
 \end_layout
 
 \end_inset
@@ -1654,6 +2033,8 @@ CCSDTQPH(S)
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 683 96
 \end_layout
 
 \end_inset
@@ -1663,6 +2044,8 @@ CCSDTQPH(S)
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 410 17
 \end_layout
 
 \end_inset
@@ -1672,15 +2055,8 @@ CCSDTQPH(S)
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+\color red
+-76.374 784
 \end_layout
 
 \end_inset
@@ -1727,7 +2103,7 @@ CCSDTQPHS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1738,13 +2114,24 @@ CCSDTQPHS
 
 \end_inset
 </cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.360 199 29(230)
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \color red
--76.360 199 29
+-76.369 410 47
 \end_layout
 
 \end_inset
@@ -1754,6 +2141,8 @@ CCSDTQPHS
 
 \begin_layout Plain Layout
 
+\color red
+-76.372 361 53
 \end_layout
 
 \end_inset
@@ -1763,6 +2152,8 @@ CCSDTQPHS
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 684 01
 \end_layout
 
 \end_inset
@@ -1772,6 +2163,8 @@ CCSDTQPHS
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 410 22
 \end_layout
 
 \end_inset
@@ -1781,15 +2174,8 @@ CCSDTQPHS
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+\color red
+-76.374 784
 \end_layout
 
 \end_inset
@@ -1836,7 +2222,7 @@ CCSDTQPHS(O)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1847,13 +2233,24 @@ CCSDTQPHS(O)
 
 \end_inset
 </cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.360 199 30(221)
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \color red
--76.360 199 30
+-76.369 410 47
 \end_layout
 
 \end_inset
@@ -1863,6 +2260,8 @@ CCSDTQPHS(O)
 
 \begin_layout Plain Layout
 
+\color red
+-76.372 361 53
 \end_layout
 
 \end_inset
@@ -1872,6 +2271,8 @@ CCSDTQPHS(O)
 
 \begin_layout Plain Layout
 
+\color red
+-76.373 684 01
 \end_layout
 
 \end_inset
@@ -1881,6 +2282,8 @@ CCSDTQPHS(O)
 
 \begin_layout Plain Layout
 
+\color red
+-76.374 410 23
 \end_layout
 
 \end_inset
@@ -1890,15 +2293,8 @@ CCSDTQPHS(O)
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+\color red
+-76.374 784
 \end_layout
 
 \end_inset
@@ -1945,7 +2341,7 @@ CCSDTQPHSO
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1956,13 +2352,117 @@ CCSDTQPHSO
 
 \end_inset
 </cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.360 199 31(230)
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \color red
--76.360 199 31
+-76.369 410 49
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.372 361 55
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.373 684 03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.374 410 25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color red
+-76.374 784
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+huge uncertainty...
+ 30 uH? differences are what's important..
+ but we're not doing differences.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="decimal" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -2041,99 +2541,7 @@ CCSDTQPHSO
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-red are from CC(N)-CC(N-1) in 2Z,
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2142,7 +2550,8 @@ status collapsed
 
 \begin_layout Plain Layout
 Uncertainties are just 1 in the next order of magnitude since differences
- can get larger in 3Z compared to 2Z but never by more than 10x
+ can get larger in 3Z compared to 2Z but never by more than 10x.
+ red are from CC(N)-CC(N-1) in 2Z,
 \end_layout
 
 \end_inset
@@ -2152,10 +2561,25 @@ Uncertainties are just 1 in the next order of magnitude since differences
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="decimal" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+uncertainty of 200 comes from the fact that CCSDTQP(H)-CCSDTQP got smaller
+ by 0.000001514664987 in 3z-2z, so could potentially get bigger by 2 uH from
+ 3z to 4z.
+ 20 comes from same argument but now it's 0.000000169944002 which is one
+ order of magnitude smaller.
+ Everything else is just simply adding uncertainties from previous column.
+ Really should probably be sqrt(a^2 + b^2) but instead I did a+b for now.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
