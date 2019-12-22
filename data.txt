@@ -1,0 +1,32 @@
+SCF energies for 2Z to 9Z.
+
+General model Rat22:
+     f(x) = (p1*x^2 + p2*x + p3) / (x^2 + q1*x + q2)
+Coefficients (with 95% confidence bounds):
+       p1 =      -76.07  (-76.07, -76.06)
+       p2 =       228.1  (79.42, 376.7)
+       p3 =      -253.2  (-438.1, -68.22)
+       q1 =      -2.999  (-4.952, -1.045)
+       q2 =        3.33  (0.8998, 5.76)
+
+Goodness of fit:
+  SSE: 5.696e-08
+  R-square: 1
+  Adjusted R-square: 0.9999
+  RMSE: 0.0001378
+
+
+
+General model Exp2:
+     f(x) = a*exp(b*x) + c*exp(d*x)
+Coefficients (with 95% confidence bounds):
+       a =      -76.07  (-76.07, -76.07)
+       b =  -6.339e-07  (-1.925e-06, 6.571e-07)
+       c =      0.6103  (0.5617, 0.6589)
+       d =       -1.35  (-1.395, -1.306)
+
+Goodness of fit:
+  SSE: 4.126e-08
+  R-square: 1
+  Adjusted R-square: 0.9999
+  RMSE: 0.0001016
