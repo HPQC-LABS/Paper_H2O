@@ -2653,6 +2653,39 @@ uncertainty of 200 comes from the fact that CCSDTQP(H)-CCSDTQP got smaller
 \end_layout
 
 \begin_layout Standard
+Bottlenecks: 
+\begin_inset Newline newline
+\end_inset
+
+- lack of method to get CBS limit of HF for triatomics.
+ 
+\end_layout
+
+\begin_layout Standard
+- speed of CCSDTQ for 7Z (cfour will take 150 days? with 768G or would require
+ 1.5T which doesn't allow more than 30 days, and NCC doesn't allow restarts
+ ...
+ not sure about MRCC...
+ Hanrath program unavailable.)
+\end_layout
+
+\begin_layout Standard
+- speed of CCSDTQP for 5Z (lack of hand-coded CCSDTQP, lack of parallel
+ I/O in MRCC, lack of Hanrath code, speed of CC-QMC to get error down).
+\end_layout
+
+\begin_layout Standard
+- ability to do CCSDTQ(P) for 5Z/6Z, or CCSDT(Q) for 7Z, 8Z, 9Z (MRCC can't
+ restart perturbative calculations).
+\end_layout
+
+\begin_layout Standard
+- getting higher than CCSDTQP is not necessary for any basis sets that it's
+ not already possible for, and getting higher than CCSDTQ does not seem
+ necessary for anything beyond 7Z?
+\end_layout
+
+\begin_layout Standard
 \noindent
 \align left
 
