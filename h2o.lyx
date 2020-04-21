@@ -710,7 +710,7 @@ ccRepo says H7Z was Feller & Peterson 2007
 \begin_layout Section
 
 \lang british
-Methodology
+Methodology and results
 \end_layout
 
 \begin_layout Standard
@@ -727,6 +727,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:mainTable"
+
+\end_inset
+
 
 \end_layout
 
@@ -2847,35 +2853,90 @@ The output files, which include the input files, are given here, and show
  all the settings used.
 \end_layout
 
-\begin_layout Subsection
-Electron correlation calculations
+\begin_layout Standard
+Table 1 has the SCF energies.
 \end_layout
 
 \begin_layout Subsection
-
-\lang british
-Estimation of 
-\begin_inset Formula $\pm2$
-\end_inset
-
-
-\begin_inset Formula $\mu E_{h}$
-\end_inset
-
- uncertainty for FCI energy with cc-pV9Z
-\end_layout
-
-\begin_layout Section
-
-\lang british
-Results
+Electron correlation calculations 
 \end_layout
 
 \begin_layout Standard
+Unrestricted coupled cluster calculations (and perturbative corrections
+ according to Kallay's paper
+\begin_inset Note Note
+status open
 
-\lang british
-summary of results, maybe this table and a table showing the differences
- in CC values
+\begin_layout Plain Layout
+but perturbative failed for 5Z for example
+\end_layout
+
+\end_inset
+
+) were done with as many excitations included in the cluster operator as
+ possible with a given basis set and within 768GiB of RAM.
+ [Give also error tolerance level].
+ The converged coupled-cluster energies are given in bold text in Table
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:mainTable"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, while energies given in plain text indicate the result of adding the energy
+ difference between the given row and the preceding row, in the preceding
+ column, to the preceding energy of a given column (the energies added are
+ either 0 or shown as a non-zero value in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:differences"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The energies in bold text are exact whereas the energies in plain text
+ are approximate.
+\end_layout
+
+\begin_layout Standard
+In Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:summary"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, final energy estimates for various levels of coupled-cluster calculations
+ are shown for the largest basis set used (cc-pV9Z) 
+\color red
+They should be the same as in Table 1 but they're not!
+\color inherit
+.
+ The RHF and CCSDT energies come from direct calculations using only the
+ cc-pV9Z basis set, whereas the rest of the rows contain energies that were
+ obtained by adding the numbers in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:differences"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that were in boldface text, and any digits which are uncertain due to the
+ approximation described in the previous paragraph, are underlined.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4913,7 +4974,7 @@ uncertainty of 200 comes from the fact that CCSDTQP(H)-CCSDTQP got smaller
 
 \lang british
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -6770,7 +6831,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:differences"
 
+\end_inset
+
+Explain what's in the brackets
 \end_layout
 
 \end_inset
@@ -9036,6 +9103,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:summary"
+
+\end_inset
+
 
 \end_layout
 
@@ -9496,6 +9569,26 @@ height "0.4pt"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+Estimation of 
+\begin_inset Formula $\pm2$
+\end_inset
+
+
+\begin_inset Formula $\mu E_{h}$
+\end_inset
+
+ uncertainty for FCI energy with cc-pV9Z
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Now we describe the patterns.
 \end_layout
 
 \begin_layout Section
