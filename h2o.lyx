@@ -72,9 +72,9 @@
 \color #008000
 \end_index
 \leftmargin 2cm
-\topmargin 2cm
+\topmargin 1.5cm
 \rightmargin 2cm
-\bottommargin 2cm
+\bottommargin 2.3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -157,6 +157,50 @@ FCI quality energy for H
 
 O with a frozen core in cc-pV9Z: 8 electrons in 957 orbitals with micro-hartree
  precision
+\end_layout
+
+\begin_layout Author
+Nike Dattani
+\end_layout
+
+\begin_layout Affiliation
+
+\lang british
+University of Waterloo, Department of Electrical and Computer Engineering,
+ Canada
+\begin_inset Note Note
+status open
+
+\begin_layout Affiliation
+
+\lang british
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+High Performance Quantum Chemistry (HPQC) Labs, Waterloo, Canada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author Email
+
+ndattani@uwaterloo.ca
+\end_layout
+
+\begin_layout Author URL
+
+www.hpqc.org
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Abstract
@@ -298,95 +342,80 @@ In this paper I calculate one contribution (the standard Hamiltonian...) to
 \begin_layout Section
 
 \lang british
-Methodology
+Implementation
 \end_layout
 
 \begin_layout Subsection
-Hamiltonian
+Hardware
 \end_layout
 
 \begin_layout Standard
-
-\lang british
-Standard Hamiltonian definition.
- 
-\end_layout
-
-\begin_layout Subsection
-Basis sets
-\end_layout
-
-\begin_layout Standard
-The electronic wavefunction was modeled using a linear combination of atomic
- orbitals (LCAO) in which Gaussian-type basis sets were used for the atomic
- orbitals.
- A series of these basis sets was used, from the 
+Despite the largest calculations in this work being state-of-the-art by
+ a large margin, they were actually done on relatively old hardware (all
+ calculations were done in 2019 on hardware from 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-correlation consistent
-\begin_inset Quotes erd
-\end_inset
-
- 
+as late as...
+ check if you used 768G nodes
 \end_layout
 
 \end_inset
 
-cc-pV
-\begin_inset Formula $X$
-\end_inset
-
-Z family, which was first proposed by Dunning 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Dunning1989"
-literal "false"
-
-\end_inset
-
-.
- For 
-\begin_inset Formula $X=2$
-\end_inset
-
- to 
-\begin_inset Formula $6$
-\end_inset
-
-, the basis sets were obtained from the EMSL basis set exchange, and for
- 
-\begin_inset Formula $X=7$
-\end_inset
-
- to 
-\begin_inset Formula $9$
-\end_inset
-
- the basis sets were obtained privately by David Feller.
- The exponents and contraction coefficients for all basis sets used in this
- work, are available on GitHub.
- 
+2014).
+ While this would have made the calculations significantly slower than they
+ could have been (in terms of wall clock time), it meant that access to
+ the hardware was more readily available than if using any of the newer
+ (and more in-demand by other scientists) resources available to the author.
+ This was especially important, since there was a lot of de-bugging involved,
+ as the integrals, scf were done with a new code, which had not been tested
+ on such basis sets before.
+ Furthermore, the particular nodes on which the calculations were done,
+ happened to have 55? T of node local storage, which was in fact necessary
+ for the calculations using the biggest basis sets, and is not available
+ on any of the other resources available to the author.
 \end_layout
 
 \begin_layout Standard
-The total number of spatial orbitals for each basis set
+All 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+coupled cluster 
 \end_layout
 
-\begin_layout Subsection
-1- and 2-electron integral calculations
+\end_inset
+
+calculations were done on Ontario's SHARCNET cluster called 
+\begin_inset Formula ${\tt wobbie}$
+\end_inset
+
+, on compute nodes containing two sockets, each with a 14-core Xeon E5-2697
+ v3 (from the Haswell-EP model, which used a 22nm process, and was first
+ released in September 2014) processors (28 cores per node).
+ [Check if I used 768G at any point].
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+All HCI were done with Graham.
 \end_layout
 
-\begin_layout Subsection
-Hartree-Fock calculations
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Calculations were done from ___ to ___.
 \end_layout
 
-\begin_layout Subsection
-Electron correlation calculations
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -394,39 +423,294 @@ Software
 \end_layout
 
 \begin_layout Standard
+For the small basis sets (cc-pV
+\begin_inset Formula $X$
+\end_inset
 
-\lang british
-Where I got the basis sets.
- What I did with CC, what program I used for integrals, SCF, integral transforma
-tion, and CC.
+Z for 
+\begin_inset Formula $X=2$
+\end_inset
+
+ to 6), the following programs from the 
+\begin_inset Formula ${\tt CFOUR\,v2.00beta}$
+\end_inset
+
+ package 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cfour"
+literal "false"
+
+\end_inset
+
+, which was released in March 2014, were used: 
+\begin_inset Formula ${\tt vmol}$
+\end_inset
+
+ for the 1- and 2-electron integrals, 
+\begin_inset Formula ${\tt vscf}$
+\end_inset
+
+ for the Hartree-Fock calculations, 
+\begin_inset Formula ${\tt vtran}$
+\end_inset
+
+ for the AO to MO transformation, and 
+\begin_inset Formula ${\tt intprc}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\tt int}$
+\end_inset
+
+ for processing and printing the integrals into 
+\begin_inset Formula ${\tt ASCII}$
+\end_inset
+
+ format for the software package 
+\begin_inset Formula ${\tt MRCC}$
+\end_inset
+
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mrcc"
+literal "false"
+
+\end_inset
+
+ to read and do the coupled cluster calculations.
+ The July 2016 release of 
+\begin_inset Formula ${\tt MRCC}$
+\end_inset
+
+ was used.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+for ccsd, handcoded or computer-generated?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the cc-pV7Z, cc-pV8Z, and cc-pV9Z basis sets, the aforementioned programs
+ in 
+\begin_inset Formula ${\tt CFOUR\,v2.00beta}$
+\end_inset
+
+ cannot treat the necessary 
+\begin_inset Formula $k$
+\end_inset
+
+-type, 
+\begin_inset Formula $l$
+\end_inset
+
+-type and 
+\begin_inset Formula $m$
+\end_inset
+
+-type Gaussian-type orbitals involved, so a development versions of 
+\begin_inset Formula ${\tt vmol}$
+\end_inset
+
+, 
+\begin_inset Formula ${\tt vscf}$
+\end_inset
+
+, and 
+\begin_inset Formula ${\tt vtran}$
+\end_inset
+
+ written by Devin Matthews, were de-bugged and tested as part of this work.
+ 
+\begin_inset Formula ${\tt MRCC}$
+\end_inset
+
+ was still used to do CCSD and CCSD(T) calculations for all three of these
+ basis sets
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+and maybe also CCSDT for 7Z?
+\end_layout
+
+\end_inset
+
+, but due to RAM limitations (? or size of fort.55?), CCSDT (which was only
+ done for cc-pV7Z), was done using the program 
+\begin_inset Formula ${\tt ncc}$
+\end_inset
+
+ from the 
+\begin_inset Formula ${\tt CFOUR\,v2.1}$
+\end_inset
+
+ package 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cfour"
+literal "false"
+
+\end_inset
+
+, which was released in July 2019.
+ CCSD and CCSD(T) calculations for all three of these basis sets were also
+ done with 
+\begin_inset Formula ${\tt ncc}$
+\end_inset
+
+, 
+\begin_inset Formula ${\tt ecc}$
+\end_inset
+
+, and 
+\begin_inset Formula ${\tt vcc}$
+\end_inset
+
+ of 
+\begin_inset Formula ${\tt CFOUR\,v2.1}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+not really because I used 2.00beta for some of them?
+\end_layout
+
+\end_inset
+
+ in addition to the aforementioned calculations done in 
+\begin_inset Formula ${\tt MRCC}$
+\end_inset
+
+, and the difference among the different implementations of CCSD and CCSD(T)
+ was never more than 
+\begin_inset Formula $2$
+\end_inset
+
+ n
+\begin_inset Formula $E_{h}$
+\end_inset
+
+ (nano-Hartrees), which gives us hope that our use of 
+\begin_inset Formula ${\tt ncc}$
+\end_inset
+
+ for CCSDT with cc-pV7Z and 
+\begin_inset Formula ${\tt MRCC}$
+\end_inset
+
+ for all smaller basis sets, was not problematic
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (
+\begin_inset Formula ${\tt MRCC}$
+\end_inset
+
+ had to be used for the smaller basis sets because ncc wasn't released until
+ July 2019
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
-
-\lang british
-Estimation of 
-\begin_inset Formula $\pm2$
-\end_inset
-
-
-\begin_inset Formula $\mu E_{h}$
-\end_inset
-
- uncertainty for FCI energy with cc-pV9Z
-\end_layout
-
-\begin_layout Section
-
-\lang british
-Results
+Data
 \end_layout
 
 \begin_layout Standard
 
 \lang british
-summary of results, maybe this table and a table showing the differences
- in CC values
+The cc-pV
+\begin_inset Formula $X$
+\end_inset
+
+Z basis sets for 
+\begin_inset Formula $X=2$
+\end_inset
+
+ to 6, were obtained from the EMSL Basis Set Exchange before January 2019
+ (the input file containing the exact exponents and contraction coefficients
+ used, and the file's version history, can be found in the file 
+\begin_inset Formula ${\tt GENBAS}$
+\end_inset
+
+ on my GitHub page).
+ For 
+\begin_inset Formula $X=2$
+\end_inset
+
+ to 5 the basis sets were originally published in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dunning1989"
+literal "false"
+
+\end_inset
+
+, and for 
+\begin_inset Formula $X=6$
+\end_inset
+
+ the basis sets were originally published in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Wilson1996"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+For 
+\begin_inset Formula $X=7$
+\end_inset
+
+ to 9, the basis sets were obtained privately by David Feller, who built
+ them for [].
+ They were then converted to 
+\begin_inset Formula ${\tt CFOUR}$
+\end_inset
+
+'s input format and inserted into the same 
+\begin_inset Formula ${\tt GENBAS}$
+\end_inset
+
+ file located in [].
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ccRepo says H7Z was Feller & Peterson 2007
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang british
+Methodology
 \end_layout
 
 \begin_layout Standard
@@ -2363,6 +2647,235 @@ height "0.4pt"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Hamiltonian
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Standard Hamiltonian definition.
+ NR-CPN.
+\end_layout
+
+\begin_layout Subsection
+Basis sets
+\end_layout
+
+\begin_layout Standard
+The electronic wavefunction was modeled using a linear combination of atomic
+ orbitals (LCAO) in which Gaussian-type basis sets were used for the atomic
+ orbitals.
+ A series of these basis sets was used, from the 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+correlation consistent
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+cc-pV
+\begin_inset Formula $X$
+\end_inset
+
+Z family, which was first proposed by Dunning 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dunning1989"
+literal "false"
+
+\end_inset
+
+.
+ The references for the specific cc-pV
+\begin_inset Formula $X$
+\end_inset
+
+Z basis sets used, were given in Section [].
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For 
+\begin_inset Formula $X=2$
+\end_inset
+
+ to 
+\begin_inset Formula $6$
+\end_inset
+
+, the basis sets were obtained from the EMSL basis set exchange, and for
+ 
+\begin_inset Formula $X=7$
+\end_inset
+
+ to 
+\begin_inset Formula $9$
+\end_inset
+
+ the basis sets were obtained privately by David Feller.
+ The exponents and contraction coefficients for all basis sets used in this
+ work, are available on GitHub.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The basis sets were contracted using a general contraction scheme (
+\begin_inset Formula ${\tt CONTRACTION=GENERAL}$
+\end_inset
+
+ in 
+\begin_inset Formula ${\tt CFOUR}$
+\end_inset
+
+), and the total number of spatial orbitals for each basis set
+\end_layout
+
+\begin_layout Subsection
+1- and 2-electron integral calculations
+\end_layout
+
+\begin_layout Standard
+The transformed integrals were calculated with the 
+\begin_inset Formula ${\tt CFOUR}$
+\end_inset
+
+ keyword 
+\begin_inset Formula ${\tt XFORM\_TOL}$
+\end_inset
+
+ set to 18 as opposed to the default value of 11, meaning that only integrals
+ with values smaller than 
+\begin_inset Formula $10^{-18}$
+\end_inset
+
+ would be neglected as opposed to the default tolerance threshold of 
+\begin_inset Formula $10^{-11}$
+\end_inset
+
+ (effectively, no integrals are ignored).
+\end_layout
+
+\begin_layout Subsection
+Hartree-Fock calculations
+\end_layout
+
+\begin_layout Standard
+RHF (restricted Hartree-Fock) calculations were done with the spin multiplicity
+ set to 1 (to obtain a singlet state).
+ A core Hamiltonian initial guess was used, with no restriction on the occupatio
+n numbers in terms of spatial symmetry within the 
+\begin_inset Formula $C_{2v}$
+\end_inset
+
+ point group which was used, but at convergence the final occupation numbers
+ were always 6 for the 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ irrep (3 electrons with spin 
+\begin_inset Formula $+\frac{1}{2}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $+\nicefrac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and 3 with 
+\begin_inset Formula $-\frac{1}{2}$
+\end_inset
+
+), 2 for the 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ and 2 for the 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ irreps (in each case, 1 electron with each spin direction), and 0 for 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No stability analysis was used.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The tolerances were....
+ 
+\end_layout
+
+\begin_layout Standard
+The output files, which include the input files, are given here, and show
+ all the settings used.
+\end_layout
+
+\begin_layout Subsection
+Electron correlation calculations
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+Estimation of 
+\begin_inset Formula $\pm2$
+\end_inset
+
+
+\begin_inset Formula $\mu E_{h}$
+\end_inset
+
+ uncertainty for FCI energy with cc-pV9Z
+\end_layout
+
+\begin_layout Section
+
+\lang british
+Results
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+summary of results, maybe this table and a table showing the differences
+ in CC values
 \end_layout
 
 \begin_layout Standard
