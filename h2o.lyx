@@ -17,6 +17,9 @@
     urlcolor={blue!100!black}
 }
 %\usepackage[backend=biber,style=ieee, maxnames=1]{biblatex}
+%\usepackage{datetime2}
+\usepackage[UKenglish]{babel}% http://ctan.org/pkg/babel
+\usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
 \end_preamble
 \options nofootinbib,showpacs,preprintnumbers,amsmath,amssymb,aps,notitlepage,prl,superscriptaddress,Hyperref,twocolumn
 \use_default_options false
@@ -188,14 +191,67 @@ High Performance Quantum Chemistry (HPQC) Labs, Waterloo, Canada
 
 \end_layout
 
+\begin_layout Author URL
+
+www.hpqc.org
+\end_layout
+
 \begin_layout Author Email
 
 ndattani@uwaterloo.ca
 \end_layout
 
-\begin_layout Author URL
+\end_inset
 
-www.hpqc.org
+
+\end_layout
+
+\begin_layout Date
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula ${\rm \cleanlookdateon\ensuremath{\today}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang british
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+\begin_inset Formula $\the\month$
+\end_inset
+
+
+\begin_inset Formula $\displaydate\today$
+\end_inset
+
+
 \end_layout
 
 \end_inset
