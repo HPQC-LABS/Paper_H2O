@@ -305,7 +305,11 @@ literal "false"
 \end_inset
 
 , and empirical atomization energies of the water molecule have been determined
- to a precision of at best .
+ to a precision of at best 
+\color red
+X
+\color inherit
+.
  Recently, computer spectroscopy has been able to determine energy differences
  with accuracies of around 
 \begin_inset Formula $\pm1\,$
@@ -324,18 +328,35 @@ cm
 \end_inset
 
 ) or better, for atoms and small molecules with a small number of electrons:
+ 
+\color red
+X
+\color inherit
+.
  If total energies can be calculated to with a precision of 
 \begin_inset Formula $\pm\sigma$
 \end_inset
 
- then energy differences involving them can be determined with a precision
+, then energy differences involving them can be determined with a precision
+ of 
+\emph on
+at worst
+\emph default
  
 \begin_inset Formula $\pm\sqrt{2}\sigma$
 \end_inset
 
- assuming gaussian?.
- Therefore calculating total (electronic?) energies of the water molecule
- to a precision of around 
+ assuming 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is drawn from a Gaussian distribution[
+\color red
+check
+\color inherit
+].
+ Therefore calculating total electronic energies of the water molecule to
+ a precision of around 
 \begin_inset Formula $\pm3$
 \end_inset
 
@@ -347,8 +368,11 @@ cm
 \begin_inset Formula $\mu E_{h}$
 \end_inset
 
- or better can be seen as a first step towards determining properties of
- the water molecule with unprecedented precision.
+ or better can be seen as a first step towards determining electronic properties
+ (ionization energies, electron affinities, Born-Oppenheimer potential energy
+ surfaces, and even atomization energies and anything else in which the
+ only significant energy change is electronic) of the water molecule with
+ unprecedented precision.
  The total electronic energy of a molecule can have many calculations contributi
 ng to it, and none of them can be calculated with a precision worse than
  about 
@@ -363,8 +387,8 @@ ng to it, and none of them can be calculated with a precision worse than
 \begin_inset Formula $\mu E_{h}$
 \end_inset
 
- if we wish to determine the total (electronic?) energy to no worse than
- 
+ if we wish to the total electronic energy with a guaranteed precision of
+ no worse than 
 \begin_inset Formula $\pm3$
 \end_inset
 
@@ -383,16 +407,20 @@ ng to it, and none of them can be calculated with a precision worse than
 \begin_layout Standard
 
 \lang british
-In this paper I calculate one contribution (the standard Hamiltonian...) to
- within 
+In this paper I calculate one contribution 
+\color red
+(the standard Hamiltonian...)
+\color inherit
+ to within 
 \begin_inset Formula $\pm2$
 \end_inset
 
- uH which is likely the best precision ever achieved for 8e- in 957 orbitals.
- Determining properties to this accuracy would require basis set extrapolations,
- which typically (in the most standard way) involve CBS for HF, which itself
- will need some work, but at least this paper eliminates the FCI portion
- of things as the bottleneck in this journey.
+ 
+\begin_inset Formula $\mu E_{h}$
+\end_inset
+
+ which is likely the best precision ever achieved for 8 electrons in 957
+ spatial orbitals.
 \end_layout
 
 \begin_layout Section
@@ -425,10 +453,11 @@ as late as...
  the hardware was more readily available than if using any of the newer
  (and more in-demand by other scientists) resources available to the author.
  This was especially important, since there was a lot of de-bugging involved,
- as the integrals, scf were done with a new code, which had not been tested
- on such basis sets before.
+ as the 1- and 2-electron integrals, SCF (self-consistent field) calculations,
+ and AO to MO transformation were done with a new code, which had not been
+ tested on such basis sets before.
  Furthermore, the particular nodes on which the calculations were done,
- happened to have 55? T of node local storage, which was in fact necessary
+ happened to have 55T of node local storage, which was in fact necessary
  for the calculations using the biggest basis sets, and is not available
  on any of the other resources available to the author.
 \end_layout
@@ -451,7 +480,9 @@ calculations were done on Ontario's SHARCNET cluster called
 , on compute nodes containing two sockets, each with a 14-core Xeon E5-2697
  v3 (from the Haswell-EP model, which used a 22nm process, and was first
  released in September 2014) processors (28 cores per node).
- [Check if I used 768G at any point].
+ 
+\color red
+[Check if I used 768G at any point].
 \begin_inset Note Note
 status open
 
@@ -571,7 +602,7 @@ For the cc-pV7Z, cc-pV8Z, and cc-pV9Z basis sets, the aforementioned programs
 \begin_inset Formula $m$
 \end_inset
 
--type Gaussian-type orbitals involved, so a development versions of 
+-type Gaussian-type orbitals involved, so development versions of 
 \begin_inset Formula ${\tt vmol}$
 \end_inset
 
@@ -583,7 +614,8 @@ For the cc-pV7Z, cc-pV8Z, and cc-pV9Z basis sets, the aforementioned programs
 \begin_inset Formula ${\tt vtran}$
 \end_inset
 
- written by Devin Matthews, were de-bugged and tested as part of this work.
+ written mainly by Devin Matthews, were de-bugged and tested as part of
+ this work.
  
 \begin_inset Formula ${\tt MRCC}$
 \end_inset
@@ -599,8 +631,11 @@ and maybe also CCSDT for 7Z?
 
 \end_inset
 
-, but due to RAM limitations (? or size of fort.55?), CCSDT (which was only
- done for cc-pV7Z), was done using the program 
+, but due to RAM limitations
+\color red
+ (? or size of fort.55?)
+\color inherit
+, CCSDT (which was only done for cc-pV7Z), was done using the program 
 \begin_inset Formula ${\tt ncc}$
 \end_inset
 
@@ -653,11 +688,11 @@ not really because I used 2.00beta for some of them?
 \begin_inset Formula $2$
 \end_inset
 
- n
-\begin_inset Formula $E_{h}$
+ 
+\begin_inset Formula $nE_{h}$
 \end_inset
 
- (nano-Hartrees), which gives us hope that our use of 
+ (nano-Hartrees), which makes us certain that our use of 
 \begin_inset Formula ${\tt ncc}$
 \end_inset
 
@@ -685,6 +720,13 @@ status open
 
 \begin_layout Subsection
 Data
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Data"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -704,7 +746,11 @@ Z basis sets for
 \begin_inset Formula ${\tt GENBAS}$
 \end_inset
 
- on my GitHub page).
+ 
+\color red
+on my GitHub page
+\color inherit
+).
  For 
 \begin_inset Formula $X=2$
 \end_inset
@@ -740,8 +786,12 @@ For
 \begin_inset Formula $X=7$
 \end_inset
 
- to 9, the basis sets were obtained privately by David Feller, who built
- them for [].
+ to 9, the basis sets were obtained privately from David Feller, who built
+ them for 
+\color red
+[]
+\color inherit
+.
  They were then converted to 
 \begin_inset Formula ${\tt CFOUR}$
 \end_inset
@@ -750,7 +800,11 @@ For
 \begin_inset Formula ${\tt GENBAS}$
 \end_inset
 
- file located in [].
+ file located in 
+\color red
+[]
+\color inherit
+.
 \begin_inset Note Note
 status open
 
@@ -2788,7 +2842,17 @@ literal "false"
 \begin_inset Formula $X$
 \end_inset
 
-Z basis sets used, were given in Section [].
+Z basis sets used, were given in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Data"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
  
 \begin_inset Note Note
 status open
@@ -2831,7 +2895,12 @@ The basis sets were contracted using a general contraction scheme (
 \begin_inset Formula ${\tt CFOUR}$
 \end_inset
 
-), and the total number of spatial orbitals for each basis set
+), and the total number of spatial orbitals for each basis set were as follows
+ 
+\color red
+X
+\color inherit
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2924,16 +2993,22 @@ No stability analysis was used.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 The tolerances were....
  
 \end_layout
 
 \begin_layout Standard
+
+\color red
 The output files, which include the input files, are given here, and show
  all the settings used.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Table 1 has the SCF energies.
 \end_layout
 
@@ -2943,7 +3018,11 @@ Electron correlation calculations
 
 \begin_layout Standard
 Unrestricted coupled cluster calculations (and perturbative corrections
- according to Kallay's paper
+ according to 
+\color red
+Kallay's paper
+\color inherit
+
 \begin_inset Note Note
 status open
 
@@ -2954,8 +3033,12 @@ but perturbative failed for 5Z for example
 \end_inset
 
 ) were done with as many excitations included in the cluster operator as
- possible with a given basis set and within 768GiB of RAM.
- [Give also error tolerance level].
+ possible with a given basis set and within 
+\color red
+768GiB of RAM.
+ [Give also error tolerance level]
+\color inherit
+.
  The converged coupled-cluster energies are given in bold text in Table
  
 \begin_inset CommandInset ref
@@ -9685,11 +9768,6 @@ Bottlenecks:
 
 \begin_layout Standard
 Bottlenecks: 
-\begin_inset Newline newline
-\end_inset
-
-- lack of method to get CBS limit of HF for triatomics.
- 
 \end_layout
 
 \begin_layout Standard
