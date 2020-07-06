@@ -2796,8 +2796,22 @@ Hamiltonian
 \begin_layout Standard
 
 \lang british
-Standard Hamiltonian definition.
- NR-CPN.
+The standard non-relativistic molecular electronic Hamiltonian with the
+ clamped nucleus (Born-Oppenheimer) approximation and the point-sized nucleus
+ approximation, was used.
+ This Hamiltonian has been called NR-CPN (non-relativistic, with clamped
+ and point-sized nucleus) in the past 
+\color red
+[]
+\color inherit
+.
+ 
+\color red
+Additionally, no fine or hyperfine terms are included, such as eQq, and
+ the two deepest core electrons are not correlated (only the other 8 electrons
+ are correlated with each other)
+\color inherit
+.
 \end_layout
 
 \begin_layout Subsection
