@@ -482,7 +482,16 @@ calculations were done on Ontario's SHARCNET cluster called
  released in September 2014) processors (28 cores per node).
  
 \color red
-[Check if I used 768G at any point].
+[Check if I used 768G at any point..
+ I did for xvcc part of 9z CCSD(T) and same for ncc 9z for CCSDT, the 9z
+ MRCC CCSD(T) was done with 512G on wob149, 8Z cc files need to be found,
+ everything else either requested for only 511G, or only required at most
+ 511G, but best way to double-check would be to look at the jobID's (though
+ not necessary if it's too much truoble, since I just checked everything
+ (except 8z still to do) and am certain enough that 9z was the only place
+ where > 512G was needed ...
+ but wait ..
+ some calcs did use 32G, so specific nodes may need to be checked].
 \begin_inset Note Note
 status open
 
