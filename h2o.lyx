@@ -346,15 +346,15 @@ at worst
 \begin_inset Formula $\pm\sqrt{2}\sigma$
 \end_inset
 
- assuming 
-\begin_inset Formula $\sigma$
+ assuming that the 
+\begin_inset Quotes eld
 \end_inset
 
- is drawn from a Gaussian distribution[
-\color red
-check
-\color inherit
-].
+law of propagation of error
+\begin_inset Quotes erd
+\end_inset
+
+ applies [Birge 1939].
  Therefore calculating total electronic energies of the water molecule to
  a precision of around 
 \begin_inset Formula $\pm3$
@@ -407,11 +407,11 @@ ng to it, and none of them can be calculated with a precision worse than
 \begin_layout Standard
 
 \lang british
-In this paper I calculate one contribution 
-\color red
-(the standard Hamiltonian...)
-\color inherit
- to within 
+In this paper I calculate the largest contribution to the total H
+\begin_inset Formula $_{2}$
+\end_inset
+
+O electronic energy, to within 
 \begin_inset Formula $\pm2$
 \end_inset
 
@@ -419,7 +419,7 @@ In this paper I calculate one contribution
 \begin_inset Formula $\mu E_{h}$
 \end_inset
 
- which is likely the best precision ever achieved for 8 electrons in 957
+, which is likely the best precision ever achieved for 8 electrons in 957
  spatial orbitals.
 \end_layout
 
@@ -1759,13 +1759,13 @@ CCSDTQ(P)
 \color black
 -76.369 401
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \color red
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1895,13 +1895,13 @@ CCSDTQP
 \color black
 -76.369 410
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \color blue
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1915,7 +1915,7 @@ status collapsed
 \color red
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2243,7 +2243,7 @@ CCSDTQPH(S)
 \color black
 -76.332 606 99
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2366,7 +2366,7 @@ CCSDTQPHS
 \color black
 -76.332 607 05
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2489,7 +2489,7 @@ CCSDTQPHS(O)
 \color black
 -76.332 607 05
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2684,7 +2684,7 @@ CCSDTQPHSO
 \color black
 -76.332 607 07
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2807,20 +2807,67 @@ Hamiltonian
 \lang british
 The standard non-relativistic molecular electronic Hamiltonian with the
  clamped nucleus (Born-Oppenheimer) approximation and the point-sized nucleus
- approximation, was used.
- This Hamiltonian has been called NR-CPN (non-relativistic, with clamped
- and point-sized nucleus) in the past 
+ approximation, was used (this Hamiltonian has been called NR-CPN (non-relativis
+tic, with clamped and point-sized nucleus) in the past 
 \color red
 []
 \color inherit
+) but with the two 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+electrons occupying the highest energy orbitals?
+\end_layout
+
+\end_inset
+
+deepest core electrons frozen and only the remaining 8 electrons correlated.
+ This constitutes a very standard 
+\begin_inset Quotes eld
+\end_inset
+
+frozen core approximation
+\begin_inset Quotes erd
+\end_inset
+
+ which can be corrected 
+\emph on
+a posteriori
+\emph default
+ since the difference between the all-electron and the frozen-core energies
+ tends to converge more rapidly with respect to basis set size and electron
+ correlation treatment than the total frozen-core energy does
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+Perhaps a Feller reference would work for the all-electron correction convergenc
+e.
+\end_layout
+
+\end_inset
+
 .
- 
 \color red
-Additionally, no fine or hyperfine terms are included, such as eQq, and
- the two deepest core electrons are not correlated (only the other 8 electrons
- are correlated with each other)
-\color inherit
-.
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\color red
+\lang british
+Additionally, no fine or hyperfine terms are included, such as eQq
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2937,10 +2984,6 @@ noprefix "false"
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4508,10 +4551,39 @@ No stability analysis was used.
 \end_layout
 
 \begin_layout Standard
+The 
+\begin_inset Formula ${\tt CFOUR}$
+\end_inset
 
+ keyword 
+\begin_inset Formula ${\tt SCF\_CONV}$
+\end_inset
+
+ was set to 7 for the cc-pV9Z basis set (
 \color red
-The tolerances were....
+and maybe 8z)
+\color inherit
+, meaning that SCF iterations were made until the maximum change in a density
+ matrix element between iterations was smaller than 10
+\begin_inset Formula $^{-7}$
+\end_inset
+
+, and 
+\begin_inset Formula ${\tt SCF\_CONV}$
+\end_inset
+
+ was set even higher for the smaller basis sets (meaning that the convergence
+ requirement was even more strict for the smaller basis sets).
+ The energies were converged even better...
  
+\color red
+=9 for 7Z, but don't know 8z so can't say it was >9 for the rest.
+ probably it was 8 for 8Z, it was 10 for 6Z, 11 for 5Z, 12 for 4Z, 3Z and
+ 2Z.
+ I wonder why it changed by literally 1 value for each Z until 4Z, was it
+ because it wasn't converging otherwise?)
+\color inherit
+.
 \end_layout
 
 \begin_layout Standard
@@ -8877,7 +8949,7 @@ CCSD(T)-CCSD
 \color none
 -9822
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 monotonic & increasing in mag
@@ -9009,7 +9081,7 @@ CCSDT-CCSD(T)
 \color none
 44.
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9140,7 +9212,7 @@ changes sign and gets bigger in magnitude!
 \color none
 117
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 monotonic & increasing in value
@@ -9272,7 +9344,7 @@ CCSDT(Q)-CCSDT
 \color none
 -434.
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9439,7 +9511,7 @@ CCSDTQ-CCSDT(Q)
 \color none
 36.7
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9584,7 +9656,7 @@ CCSDTQ(P)-CCSDTQ
 \begin_layout Plain Layout
 -6.5
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9718,7 +9790,7 @@ CCSDTQP-CCSDTQ(P)
 \begin_layout Plain Layout
 -9.0
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9925,7 +9997,7 @@ CCSDTQP(H)-CCSDTQP
 \begin_layout Plain Layout
 -0.5
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -10046,7 +10118,7 @@ CCSDTQPH-CCSDTQP(H)
 \begin_layout Plain Layout
 -0.2
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
