@@ -4588,15 +4588,23 @@ and maybe 8z)
 
 \begin_layout Standard
 
-\color red
-The output files, which include the input files, are given here, and show
- all the settings used.
-\end_layout
+\color black
+All other settings, and details of how well the energies were converged,
+ can be found in the output files (which include the corresponding input
+ files at the beginning) which are included at AI_Energies (symbolic link
+ from Paper_H2O folder to AI_Energies folder so that if files at AI_Energies
+ change paths it's okay?).
+ The final SCF energies for each basis set are given in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:mainTable"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Standard
+\end_inset
 
-\color red
-Table 1 has the SCF energies.
+.
 \end_layout
 
 \begin_layout Subsection
@@ -4605,10 +4613,18 @@ Electron correlation calculations
 
 \begin_layout Standard
 Unrestricted coupled cluster calculations (and perturbative corrections
- according to 
-\color red
-Kallay's paper
+ 
+\color black
+as defined in 
 \color inherit
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kallay2005"
+literal "false"
+
+\end_inset
+
 
 \begin_inset Note Note
 status open
@@ -4620,14 +4636,60 @@ but perturbative failed for 5Z for example
 \end_inset
 
 ) were done with as many excitations included in the cluster operator as
- possible with a given basis set and within 
-\color red
-768GiB of RAM.
- [Give also error tolerance level]
-\color inherit
+ possible with a given basis set 
+\color black
+and within 768GiB of RAM.
+ All iterative coupled cluster calculations
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\color black
+I only checked the highest level of CC, need to check others..
+ also is there a CCSDT in MRCC for 9Z? Also need to check 8Z
+\end_layout
+
+\end_inset
+
+ calculated in 
+\begin_inset Formula ${\tt MRCC}$
+\end_inset
+
+ were converged such that the norm of the residual vector was below 
+\begin_inset Formula $7\times10^{-6}$
+\end_inset
+
+ in the last iteration, and in all cases the final iteration resulted in
+ the energy changing by no more than 0.13
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu E_{h}$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\color black
+actually 3.6uH for CFOUR calculation of CCSD for 9Z, and don't understand
+ CFOUR residuals.
+ Also energy changes were at about 0.05 uH for all basis sets except 5Z which
+ was 1.2 uH ..
+ maybe do another iteration just for cleanliness.
+\end_layout
+
+\end_inset
+
 .
- The converged coupled-cluster energies are given in bold text in Table
- 
+\end_layout
+
+\begin_layout Standard
+The converged coupled-cluster energies are given in bold text in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:mainTable"
